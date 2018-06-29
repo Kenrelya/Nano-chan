@@ -7,6 +7,12 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('name', 'presentation');
+  if (!channel) return;
+  channel.send(`Bienvenue ${member} ! Pour avoir accès au reste du serveur, présente toi en quelques mots (passions, animes préférés, ...)`);
+});
+
 client.on('message', msg => {
   if (msg.content.toUpperCase() === 'BONJOUR') {
     msg.reply('bonjour');
@@ -34,6 +40,19 @@ client.on('message', msg => {
         msg.member.removeRole(idLol);
         msg.reply('role supprimé');
       }
+  }
+
+  if (msg.channel.name === 'test-bot') {
+    var chan = client.channels.find (channel => channel.name === 'azerty');
+    try {
+      if (msg.content === '?join' && chan.joinable)
+        chan.join();
+      if (msg.content === '?leave')
+        chan.leave();
+    }
+    catch (error) {
+      console.log(error);
+    }
   }
 });
 
