@@ -1,0 +1,26 @@
+{
+  "name": "nano-chan",
+  "version": "1.0.0",
+  "description": "the best discord bot",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "giphy-api": "^1.2.7",
+    "giphy-js-sdk-core": "^1.0.3",
+    "youtube-dl": "^1.12.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kenrelya/Nano-chan.git"
+  },
+  "author": "Kenrelya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kenrelya/Nano-chan/issues"
+  },
+  "homepage": "https://github.com/Kenrelya/Nano-chan#readme"
+}
